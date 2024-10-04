@@ -1,4 +1,6 @@
 function FindProxyForURL(url, host) {
+    var proxy = "PROXY 127.0.0.1:7891";
+    var direct = "DIRECT";
         if (
                 //Twitter
                 shExpMatch(host, "*.link45.top") ||
@@ -25,8 +27,7 @@ function FindProxyForURL(url, host) {
                 //Facebook
                 shExpMatch(host, "*.facebook.com") ||
                 shExpMatch(host, "*.fbcdn.net")
-        )
-                return "PROXY 127.0.0.1:7891";
-        else
-                return "DIRECT";
-}
+    {
+        return proxy; 
+    }
+    return direct;}
