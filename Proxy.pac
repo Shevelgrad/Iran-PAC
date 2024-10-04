@@ -1,12 +1,9 @@
 function FindProxyForURL(url, host) {
         if (
-                //Mbaz
+                //Twitter
                 shExpMatch(host, "*.link45.top") ||
                 shExpMatch(host, "*.link455.top") ||
-                //Twitter
-                shExpMatch(host, "*.twimg.com") ||
-                shExpMatch(host, "*.twitter.com") ||
-                shExpMatch(host, "*.twitter.co.uk") ||
+                shExpMatch(host, "*.link4555.top") ||
                 //Yammer
                 shExpMatch(host, "*.yammer.com") ||
                 shExpMatch(host, "*.assets-yammer.com") ||
