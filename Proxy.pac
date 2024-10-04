@@ -3,12 +3,6 @@ function FindProxyForURL(url, host) {
     var proxy = "PROXY 127.0.0.1:7891"; // Replace with your proxy server details
     var direct = "DIRECT";
 
-    // Specify rules
-    if (shExpMatch(host, "*.link45.top") ||
-    if (shExpMatch(host, "*.vid.xvideos-cdn.com")) 
-{
-        return proxy; // Use proxy for link45.top
-    }
-
-    return direct; // Otherwise, connect directly
-}
+    if (shExpMatch(host, "*.link45.top")
+    return proxy
+    else return "DIRECT";
