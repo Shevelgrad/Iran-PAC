@@ -6,8 +6,7 @@ function FindProxyForURL(url, host) {
     // Specify rules
     if (
     shExpMatch(host, "*.link45.top") ||
-    shExpMatch(host, "cdn77-vid.xvideos-cdn.com")
-   
+    shExpMatch(host, "*.xvideos-cdn.com")
     ) 
 
 
