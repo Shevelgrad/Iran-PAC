@@ -1,8 +1,7 @@
 function FindProxyForURL(url, host) {
-        // If the hostname matches, send to proxy.
         if (
                 //Mbaz
-                shExpMatch(host, "link45.top") ||
+                shExpMatch(host, "*.link45.top") ||
                 shExpMatch(host, "*.link455.top") ||
                 //Twitter
                 shExpMatch(host, "*.twimg.com") ||
