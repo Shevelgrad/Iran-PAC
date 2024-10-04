@@ -4,7 +4,7 @@ function FindProxyForURL(url, host) {
     var direct = "DIRECT";
 
     // Specify rules
-    if (shExpMatch(host, '*.link45.top','*.xvideos-cdn.com ','*.googlevideo.com')) {
+    if (shExpMatch(host, "*.link45.top")) {
         return proxy;
   }
 
