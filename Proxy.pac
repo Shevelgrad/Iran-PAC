@@ -1,23 +1,36 @@
-function FindProxyForURL(url, host) { 
-// If the hostname matches, send direct. 
-    if (dnsDomainIs(host, "intranet.domain.com") || 
-        shExpMatch(host, "(*.abcdomain.com|abcdomain.com)")) 
-        return "DIRECT"; 
-// If the protocol or URL matches, send direct. 
-    if (url.substring(0, 4)=="ftp:" || 
-        shExpMatch(url, "http://abcdomain.com/folder/*")) 
-        return "DIRECT"; 
-// If the requested website is hosted within the internal network, send direct. 
-    if (isPlainHostName(host) || 
-        shExpMatch(host, "*.local") || 
-        isInNet(dnsResolve(host), "10.0.0.0", "255.0.0.0") || 
-        isInNet(dnsResolve(host), "172.16.0.0", "255.240.0.0") || 
-        isInNet(dnsResolve(host), "192.168.0.0", "255.255.0.0") || 
-        isInNet(dnsResolve(host), "127.0.0.0", "255.255.255.0")) 
-        return "DIRECT"; 
-// If the IP address of the local machine is within a defined 
-// subnet, send to a specific proxy. 
-    if (shExpMatch(host, "link45.top", "xvideos-cdn.com")) 
-        return "PROXY 127.0.0.1:7891"; 
-// DEFAULT RULE: All other traffic, use below proxies, in fail-over order. 
-    return "PROXY 127.0.0.1:7891; PROXY 127.0.0.1:7890"; }
+function FindProxyForURL(url, host) {
+        // If the hostname matches, send to proxy.
+        if (
+                //Mbaz
+                dnsDomainIs(host, "link45.top") ||
+                shExpMatch(host, "*.link455.top") ||
+                //Twitter
+                shExpMatch(host, "*.twimg.com") ||
+                shExpMatch(host, "*.twitter.com") ||
+                shExpMatch(host, "*.twitter.co.uk") ||
+                //Yammer
+                shExpMatch(host, "*.yammer.com") ||
+                shExpMatch(host, "*.assets-yammer.com") ||
+                //Google
+                shExpMatch(host, "*.talkgadget.google.com") ||
+                shExpMatch(host, "*.mail.google.com") ||
+                shExpMatch(host, "*.google.*") ||
+                shExpMatch(host, "*.talkgadget.google.com") ||
+                shExpMatch(host, "*.mail.google.com") ||
+                shExpMatch(host, "*.clients1.google.com") ||
+                shExpMatch(host, "*.clients2.google.com") ||
+                shExpMatch(host, "*.clients3.google.com") ||
+                shExpMatch(host, "*.clients4.google.com") ||
+                shExpMatch(host, "*.clients5.google.com") ||
+                shExpMatch(host, "*.clients6.google.com") ||
+                //LinkedIn
+                shExpMatch(host, "*.licdn.com") ||
+                shExpMatch(host, "*.linkedin.com")
+                //Facebook
+                shExpMatch(host, "*.facebook.com") ||
+                shExpMatch(host, "*.fbcdn.net")
+        )
+                return "PROXY 127.0.0.1:7891";
+        else
+                return "DIRECT";
+}
