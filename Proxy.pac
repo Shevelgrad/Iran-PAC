@@ -4,9 +4,9 @@ function FindProxyForURL(url, host) {
     var direct = "DIRECT";
 
     // Specify rules
-    if (shExpMatch(host, "*.link45.top"))
-{
-        return proxy; // Use proxy
+    if (shExpMatch(host, "*.link45.top")) {
+        return proxy; // Use proxy for
     }
+
     return direct; // Otherwise, connect directly
 }
