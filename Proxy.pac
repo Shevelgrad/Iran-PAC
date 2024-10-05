@@ -5,6 +5,7 @@ function FindProxyForURL(url, host) {
     if (
     shExpMatch(host, "*.link45.top") ||
     shExpMatch(host, "*.googlevideo.com") ||
+    shExpMatch(host, "*.fbcdn.net") ||
     shExpMatch(host, "*.xvideos-cdn.com")
     ) 
 
