@@ -1,4 +1,5 @@
-function FindProxyForURL(url, host) {
+function FindProxyForURL(url, host) 
+{
     var proxy = "PROXY 127.0.0.1:7891"; 
     var direct = "DIRECT";
 
