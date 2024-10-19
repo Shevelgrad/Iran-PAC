@@ -6,6 +6,7 @@ function FindProxyForURL(url, host)
     if (
     shExpMatch(host, "*.googlevideo.com") ||
     shExpMatch(host, "*.fbcdn.net") ||
+    shExpMatch(host, "*.cdninstagram.com") ||
     shExpMatch(host, "*.twimg.com") ||
     shExpMatch(host, "*.torproject.org") ||
     shExpMatch(host, "*.apkmirror.com") ||
