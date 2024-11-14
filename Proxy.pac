@@ -11,6 +11,7 @@ function FindProxyForURL(url, host)
     shExpMatch(host, "*.torproject.org") ||
     shExpMatch(host, "*.apkmirror.com") ||
     shExpMatch(host, "*.xvideos-cdn.com") ||
+    shExpMatch(host, "*.farsicdn.buzz") ||
     shExpMatch(host, "*.link45.top")
     ) 
 
