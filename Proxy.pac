@@ -16,7 +16,7 @@ function FindProxyForURL(url, host)
     shExpMatch(host, "*.link4611.top") ||
     shExpMatch(host, "*.link3207.top") ||
     shExpMatch(host, "*.link1606.top") ||
-    shExpMatch(host, "*.link3295.top") ||
+    shExpMatch(host, "*.link3695.top") ||
     shExpMatch(host, "*.flnd.buzz") ||
     shExpMatch(host, "*.link45.top")
     ) 
