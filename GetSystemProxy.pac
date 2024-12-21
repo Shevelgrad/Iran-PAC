@@ -4,7 +4,7 @@ function FindProxyForURL(url, host)
     var getSystemProxyForUrl = require('get-system-proxy-for-url');
 
     if (
-    shExpMatch(host, "*.googlevideo.com") ||
+
     shExpMatch(host, "*.fbcdn.net") ||
     shExpMatch(host, "*.cdninstagram.com") ||
     shExpMatch(host, "*.twimg.com") ||
