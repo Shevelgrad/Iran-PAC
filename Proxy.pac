@@ -1,23 +1,14 @@
 function FindProxyForURL(url, host) {
-    // Try downloading the file directly by default
-    var isFileDownload = url.indexOf(".file_extension") !== -1; // Replace .file_extension with the specific extension of the file you're targeting
-    var proxy = "PROXY 127.0.0.1:7890"; 
-    var direct = "DIRECT";
+    // Specify your conditions for the "DIRECT" connection here
+    var directConnection = true; // This is just a placeholder
 
-    if (
-    shExpMatch(host, "*.googlevideo.com") ||
-    shExpMatch(host, "*.fbcdn.net") ||
-    shExpMatch(host, "*.cdninstagram.com") ||
-    shExpMatch(host, "*.twimg.com") ||
-    ) 
-    {
-        return proxy; 
+    // You can add your own conditions to determine if the direct connection should be attempted
+    // For example, check a specific domain or path
+    if (/* condition for direct access */) {
+        return "DIRECT"; // Try to connect directly
+    } else {
+        return "PROXY 127.0.0.1:7890"; // Fallback to the proxy server
     }
+}
 
-    if (isFileDownload) {
-        // Attempt to download the file directly
-        return "DIRECT";
-    }
-    // If there's a host error, use the proxy
-        return proxy; 
-    }
+// Possibly add more conditions as needed for specific cases
