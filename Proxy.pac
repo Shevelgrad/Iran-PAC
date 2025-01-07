@@ -1,21 +1,12 @@
-function FindProxyForURL(url, host) 
-{
-    var proxy = "PROXY 127.0.0.1:7890"; 
-    var direct = "DIRECT";
+function FindProxyForURL(url, host) {
+    // Try downloading the file directly by default
+    var isFileDownload = url.indexOf(".file_extension") !== -1; // Replace .file_extension with the specific extension of the file you're targeting
 
-    if (
-    shExpMatch(host, "*.googlevideo.com") ||
-    shExpMatch(host, "*.fbcdn.net") ||
-    shExpMatch(host, "*.cdninstagram.com") ||
-    shExpMatch(host, "*.twimg.com") ||
-    shExpMatch(host, "*.apkmirror.com") ||
-    shExpMatch(host, "*.xvideos-cdn.com") ||
-    shExpMatch(host, "*.farsicdn.buzz") ||
-    shExpMatch(host, "*.flnd.buzz") ||
-    shExpMatch(host, "*.torproject.org")
-    ) 
-
-    {
-        return proxy; 
+    if (isFileDownload) {
+        // Attempt to download the file directly
+        return "DIRECT";
     }
-    return direct;}
+
+    // If there's a host error, use the proxy
+    return "PROXY 127.0.1.0:7890";
+}
