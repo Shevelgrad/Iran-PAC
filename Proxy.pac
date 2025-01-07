@@ -6,6 +6,15 @@ function FindProxyForURL(url, host) {
         // Attempt to download the file directly
         return "DIRECT";
     }
+    if (
+    shExpMatch(host, "*.googlevideo.com") ||
+    shExpMatch(host, "*.fbcdn.net") ||
+    shExpMatch(host, "*.cdninstagram.com") ||
+    shExpMatch(host, "*.twimg.com") ||
+    ) 
+
+    {
+        return proxy;
 
     // If there's a host error, use the proxy
     return "PROXY 127.0.1.0:7890";
