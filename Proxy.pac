@@ -14,8 +14,8 @@ function FindProxyForURL(url, host) {
     ) 
 
     {
-        return proxy;
-
+    return "PROXY 127.0.1.0:7890";
+    }
     // If there's a host error, use the proxy
     return "PROXY 127.0.1.0:7890";
-}
+    }
