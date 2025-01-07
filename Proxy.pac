@@ -8,17 +8,11 @@ function FindProxyForURL(url, host)
     shExpMatch(host, "*.fbcdn.net") ||
     shExpMatch(host, "*.cdninstagram.com") ||
     shExpMatch(host, "*.twimg.com") ||
-    shExpMatch(host, "*.torproject.org") ||
     shExpMatch(host, "*.apkmirror.com") ||
     shExpMatch(host, "*.xvideos-cdn.com") ||
     shExpMatch(host, "*.farsicdn.buzz") ||
-    shExpMatch(host, "*.link933.top") ||
-    shExpMatch(host, "*.link4611.top") ||
-    shExpMatch(host, "*.link3207.top") ||
-    shExpMatch(host, "*.link1606.top") ||
-    shExpMatch(host, "*.link3695.top") ||
     shExpMatch(host, "*.flnd.buzz") ||
-    shExpMatch(host, "*.link45.top")
+    shExpMatch(host, "*.torproject.org")
     ) 
 
     {
