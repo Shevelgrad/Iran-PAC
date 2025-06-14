@@ -1,14 +1,19 @@
-function FindProxyForURL(url, host) {
-    // Specify your conditions for the "DIRECT" connection here
-    var directConnection = true; // This is just a placeholder
+function FindProxyForURL(url, host) 
+{
+    var proxy = "PROXY 127.0.0.1:7890"; 
+    var direct = "DIRECT";
 
-    // You can add your own conditions to determine if the direct connection should be attempted
-    // For example, check a specific domain or path
-    if (/* condition for direct access */) {
-        return "DIRECT"; // Try to connect directly
-    } else {
-        return "PROXY 127.0.0.1:7890"; // Fallback to the proxy server
+    if (
+    shExpMatch(host, "*.googlevideo.com") ||
+    shExpMatch(host, "*.fbcdn.net") ||
+    shExpMatch(host, "*.twimg.com") ||
+    shExpMatch(host, "*.torproject.org") ||
+    shExpMatch(host, "*.apkmirror.com") ||
+    shExpMatch(host, "*.xvideos-cdn.com") ||
+    shExpMatch(host, "*.link3229.top")
+    ) 
+    {
+        return proxy; 
     }
+    return direct;
 }
-
-// Possibly add more conditions as needed for specific cases
