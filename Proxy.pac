@@ -20,6 +20,6 @@ function FindProxyForURL(url, host) {
         }
     }
 
-    // بقیه موارد: اول تلاش مستقیم، اگه نشد، از سیستم پراکسی
-    return direct + "; " + proxy;
+    // بقیه موارد فقط مستقیم برن
+    return direct;
 }
